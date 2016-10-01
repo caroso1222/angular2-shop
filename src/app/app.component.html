@@ -1,0 +1,35 @@
+<div class="main-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="filters-wrapper">
+          <url-form (onURLChange)='onURLChange($event)'></url-form>
+          <cart></cart>
+          <filters #filtersComponent [categories]='originalData.categories' [customFilters]='customFilters' [priceFilters]='priceFilters' (onFilterChange)='onFilterChange($event)'></filters>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="row">
+          <div class="col-8">
+            <div class="sort-filters-wrapper">
+              <sort-filters [filters]='sortFilters' (onSortChange)='sortProducts($event)'></sort-filters>
+            </div>
+          </div>
+          <div class="col-4">
+            <search-bar  #searchComponent (onSearchChange)='onSearchChange($event)'></search-bar>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <showcase [products]='products'></showcase>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

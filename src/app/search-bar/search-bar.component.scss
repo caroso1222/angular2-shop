@@ -1,0 +1,112 @@
+@import "../shared/colors";
+@import "../shared/mixins";
+
+@-webkit-keyframes plop-glass{
+  50%{
+    -webkit-transform: scale(1.35);
+    transform: scale(1.35);
+  }
+  100%{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes plop-glass{
+  50%{
+    -webkit-transform: scale(1.35);
+    transform: scale(1.35);
+  }
+  100%{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+.wrapper{
+  position: relative;
+  display: block;
+  margin-left: auto;
+}
+
+.search-bar{
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 20px;
+  box-shadow: 0 3px 14px rgba(25, 25, 25, 0.05);
+  font-weight: 500;
+  position: relative;
+  left: -33px;
+  color: #999999;
+  @include transition-fade-circ(0.4s);
+  &:focus{
+    box-shadow: 0 4px 11px rgba(93, 78, 240, 0.09);
+    font-weight: 500;
+    color: $primary-color;
+    width: 120%;
+    -webkit-transform: translateX(-15%);
+    transform: translateX(-15%);
+    & + svg path{
+        fill: $primary-color;
+    }
+    & + svg{
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+}
+
+svg.animate-plop{
+  -webkit-animation: plop-glass 0.1s ease forwards;
+          animation: plop-glass 0.1s ease forwards;
+}
+
+::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #cccccc;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #cccccc
+}
+:-ms-input-placeholder {
+   color: #cccccc;
+}
+
+svg{
+  position: absolute;
+  right: 24px;
+  top: 3px;
+  height: 31px;
+  width: 15px;
+  @include transition-fade(0.3s);
+  path{
+    fill: #333333;
+  }
+}
+
+/** Media queries **/
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px) {
+    .search-bar{
+      left: 0;
+      border-radius: 0;
+      height: 43px;
+      &:focus{
+        width: 100%;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+    svg{
+      top: 8px;
+    }
+  }

@@ -1,0 +1,9 @@
+@mixin transition-fade($time) {
+  -webkit-transition: all $time ease;
+  transition: all $time ease;
+}
+
+@mixin transition-fade-circ($time) {
+  -webkit-transition: all $time cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition:         all $time cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}

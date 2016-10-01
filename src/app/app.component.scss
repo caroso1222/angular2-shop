@@ -1,0 +1,84 @@
+@import "./shared/colors";
+@import "./shared/mixins";
+
+.main-container{
+  padding-top: 100px;
+}
+
+.filters-wrapper{
+  position: relative;
+  z-index: 90000;
+}
+
+sort-filters{
+  position: relative;
+  z-index: 20;
+}
+
+cart{
+  position: absolute;
+  top: -23px;
+  right: -57px;
+  z-index: 99999999;
+}
+
+search-bar{
+  position: relative;
+  top: -8px;
+}
+
+showcase{
+  position: relative;
+  top: -39px;
+  z-index: 10
+}
+
+.sort-filters-wrapper{
+  position: relative;
+}
+
+url-form{
+  position: absolute;
+  top: -55px;
+}
+
+/** Media queries **/
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px) {
+    url-form{
+        position: fixed;
+        bottom: 20px;
+        left: 10px;
+    }
+
+    filters{
+      position: fixed;
+      top: 44px;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+    }
+    .sort-filters-wrapper{
+      position: fixed;
+      top: 44px;
+      left: 0;
+      width: 100%;
+      box-shadow: 0px 3px 16px rgba(0,0,0,0.3);
+      padding-top: 10px;
+      background: $primary-color;
+      z-index: 200;
+    }
+
+    .main-container{
+      padding-top: 34px;
+    }
+    search-bar{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      left: 0;
+      z-index: 9000;
+    }
+
+  }

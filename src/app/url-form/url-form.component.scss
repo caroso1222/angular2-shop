@@ -1,0 +1,115 @@
+@import "../shared/colors";
+@import "../shared/mixins";
+
+.wrapper{
+  margin-bottom: 20px;
+  position: relative;
+}
+.url-btn{
+  background: $secondary-color;
+  border: none;
+  padding: 0;
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  svg{
+    height: 9px;
+  }
+}
+
+.fill{
+  width: 0px;
+  height: 36px;
+  width: 36px;
+  border-radius: 3px;
+  background-color: $secondary-color;
+  box-shadow: 0 2px 13px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  @include transition-fade-circ(0.2s);
+  &.expanded{
+    width: 400px;
+    .url-input{
+      width: 80%;
+      color: white;
+      margin-left: 34px;
+    }
+  }
+}
+
+.url-input{
+  width: 0px;
+  position: absolute;
+  background: none;
+  border: none;
+  border-radius: 0;
+  margin-left: 0;
+  margin-left: 44px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+  background: rgba(255,255,255,0.1);
+  position: relative;
+  top: 7px;
+  padding-left: 4px;
+  @include transition-fade(0.5s);
+  &:focus{
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+  }
+}
+
+.send-btn{
+  width: 0;
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  z-index: 50;
+  top:0;
+  border: none;
+  background: none;
+  svg{
+    height: 14px;
+    position: relative;
+    top: 3px;
+  }
+}
+
+
+::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(255,255,255,0.4);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(255,255,255,0.4)
+}
+:-ms-input-placeholder {
+   color: rgba(255,255,255,0.4);
+}
+
+/** Media queries **/
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px) {
+    .wrapper{
+      margin-bottom: 20px;
+      position: absolute;
+      top: 152px;
+    }
+    .fill{
+      &.expanded{
+          width: 250px;
+          .url-input{
+            width: 168px;
+            top: 2px;
+          }
+          .send-btn{
+            padding: 0;
+          }
+      }
+  }
+}
