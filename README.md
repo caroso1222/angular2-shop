@@ -10,7 +10,7 @@ This is an example project to show an implementation of a fancy, responsive, cro
 * Filter products by categories, price range, availability, and more custom filters.
 * Add products to the shopping cart
 * See details and manage the shopping cart
-* You can also load your own data through the app. You'll see a red button with a *link* icon, click it and paste the URL. The JSON file must follow a specific format. [see example here](http://carlosroso.com/angular2-shop-json/)
+* You can also load your own data through the app. You'll see a red button with a *link* icon, click it and paste the URL. The JSON file must follow a specific format. [see example here](http://carlosroso.com/angular2-shop-json/). **IMPORTANT:** Make sure you set the appropriate `Access-Control-Allow-Methods` header on your JSON HTTP response. 
 * **Pretty good looking UI and some fancy animations to improve UX**
 
 ##Installation

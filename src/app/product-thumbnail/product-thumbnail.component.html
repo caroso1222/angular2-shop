@@ -9,8 +9,14 @@
     <div class="details">
       <div class="available" *ngIf = 'product.available'>
         <hr>
-        <button type="button" class="view" (click)='onProductClick()'>View details</button>
-        <button type="button" class="cart" (click)="onAddToCart()"><img src="../../assets/cart_primary.svg" alt="" /></button>
+        <div class="row">
+          <div class="col-8-sm view-details-wrapper">
+            <button type="button" class="view" (click)='onProductClick()'>View details</button>
+          </div>
+          <div class="col-4-sm add-cart-wrapper">
+            <button type="button" class="cart" (click)="onAddToCart()"><img src="../../assets/cart_primary.svg" alt="" /></button>
+          </div>
+        </div>
       </div>
       <div class="not-available" *ngIf = '!product.available'>
         <hr>
