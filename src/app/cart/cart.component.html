@@ -12,12 +12,12 @@
             <p>{{item.quantity}} x {{item.product.name}}</p>
           </div>
           <div class="col-6-sm price">
-            <p>{{item.quantity*item.product.parsedPrice | currency:'USD':true:'1.0-0' }}</p>
+            <p>{{item.quantity*item.product.parsedPrice | currency:'USD':'symbol':'1.0-0' }}</p>
           </div>
         </div>
         <button class="delete-btn" (click) = 'deleteProduct(item.product)'>x</button>
       </div>
-      <button type="button" class="pay-btn">Pay {{cartTotal | currency:'USD':true:'1.0-0'}}</button>
+      <button type="button" class="pay-btn">Pay {{cartTotal | currency:'USD':'symbol':'1.0-0'}}</button>
     </div>
     <button type="button" class="close-btn" *ngIf='expanded' (click)="onCartClick()">Close</button>
   </div>

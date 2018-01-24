@@ -1,6 +1,11 @@
 @import "../shared/colors";
 @import "../shared/mixins";
 
+:host {
+  display: block;
+  height: 210px;
+}
+
 .wrapper{
   border-radius: 5px;
   box-shadow: 0 5px 5px;

@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./app/shared/grid";
+@import "./app/shared/colors";
+$font-family: 'Roboto', Helvetica, sans-serif;
+
+html, body {
+  font-family: $font-family;
+  color: #444444;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #f2f2f2;
+}
+
+input, textarea, button {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+input:not([type=checkbox]):not([type=radio]), textarea {
+  -webkit-appearance: none !important;
+}
+
+* {
+  outline: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: -1px;
+  text-overflow: '';
+}
+
+button {
+  cursor: pointer;
+}

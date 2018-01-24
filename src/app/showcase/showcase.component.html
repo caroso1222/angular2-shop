@@ -1,5 +1,6 @@
 <div class="row">
-  <div class="col-4" *ngFor = 'let product of products'>
-    <product-thumbnail [product] = 'product'></product-thumbnail>
-  </div>
+    <product-thumbnail [product]="product"
+                        *ngFor="let product of products"
+                        class="col-4 product-thumbnail">
+    </product-thumbnail>
 </div>
