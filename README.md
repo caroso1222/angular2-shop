@@ -4,7 +4,7 @@ This is an example project to show an implementation of a fancy, responsive, cro
 
 **Demo:** [carlosroso.com/angular2-shop](http://carlosroso.com/angular2-shop/)
 
-##Features
+## Features
 * Sort products by name, price (asc) and price (desc)
 * Instant search by product name
 * Filter products by categories, price range, availability, and more custom filters.
@@ -13,7 +13,7 @@ This is an example project to show an implementation of a fancy, responsive, cro
 * You can also load your own data through the app. You'll see a red button with a *link* icon, click it and paste the URL. The JSON file must follow a specific format. [see example here](http://carlosroso.com/angular2-shop-json/). **IMPORTANT:** Make sure you set the appropriate `Access-Control-Allow-Methods` header on your JSON HTTP response. 
 * **Pretty good looking UI and some fancy animations to improve UX**
 
-##Installation
+## Installation
 
 Clone the project
 ```bash
@@ -39,7 +39,7 @@ ng serve
 Now open a new tab at **localhost:4200**.
 
 
-##Contributing
+## Contributing
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
 
