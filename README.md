@@ -1,6 +1,6 @@
 # Angular 2 Shop
 
-This is an example project to show an implementation of a fancy, responsive, cross browser compatible (IE11) shop/ecommerce webapp made on Angular 2.
+This is an implementation of a fancy, responsive, cross browser compatible (IE11) shop/ecommerce webapp built on Angular.
 
 **Demo:** [carlosroso.com/angular2-shop](http://carlosroso.com/angular2-shop/)
 
@@ -11,6 +11,7 @@ This is an example project to show an implementation of a fancy, responsive, cro
 * Add products to the shopping cart
 * See details and manage the shopping cart
 * You can also load your own data through the app. You'll see a red button with a *link* icon, click it and paste the URL. The JSON file must follow a specific format. [see example here](http://carlosroso.com/angular2-shop-json/). **IMPORTANT:** Make sure you set the appropriate `Access-Control-Allow-Methods` header on your JSON HTTP response. 
+* Angular 6 compatible
 * **Pretty good looking UI and some fancy animations to improve UX**
 
 ## Installation
