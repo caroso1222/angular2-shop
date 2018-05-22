@@ -1,12 +1,15 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
+
+import {catchError, map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
 import { DATA } from './mock-data';
-import { Observable }     from 'rxjs/Observable';
 
-import 'rxjs/add/observable/throw';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
+
+
+
 
 @Injectable()
 export class DataService {
@@ -18,9 +21,9 @@ export class DataService {
   }
 
   getRemoteData(url): Observable<any>{
-    return this.http.get(url)
-                    .map(this.extractData)
-                    .catch(this.handleError);
+    return this.http.get(url).pipe(
+                    map(this.extractData),
+                    catchError(this.handleError),);
   }
 
   private extractData(res: Response) {
@@ -34,7 +37,7 @@ export class DataService {
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg); // log to console instead
-    return Observable.throw(errMsg);
+    return observableThrowError(errMsg);
   }
 
 }
